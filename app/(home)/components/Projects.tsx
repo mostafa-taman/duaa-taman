@@ -1,4 +1,4 @@
-import { Brush, Camera, Mic2, Pencil, Video } from "lucide-react";
+import { Brush, Camera, Mic2, Pencil, Video, Aperture } from "lucide-react";
 
 import GradientText from "@/components/general/GradientText";
 import Link from "next/link";
@@ -11,10 +11,10 @@ const projectCategories = [
         desc: "Video editing is my bread & butter. I am fluent in all the major software including but not limited to Davinci Resolve, Adobe primere, Adobe After Effects and more."
     },
     {
-        name: "Video Creation",
+        name: "Content Creation",
         icon: <Camera className="text-pink-600" size={40} />,
         url: "/videos",
-        desc: "I am not afraid to get in front of the camera when I need to. Thanks to my skills I can create, edit and publish a video all by myself. Check out some of my handy work"
+        desc: "I am not afraid to get in front of the camera when I need to. Thanks to my skills I can serve as both the face adn the creative engine of the project. Check out some of my handy work"
     },
     {
         name: "Script Writing",
@@ -34,6 +34,12 @@ const projectCategories = [
         url: "/radio-voiceover",
         desc: "Visual meida is not the only way to communicate. I can also do voice over, podcasts and all kinds of audio content."
     },
+     {
+        name: "Video Prodcution",
+        icon: <Aperture className="text-pink-600" size={40} />,
+        url: "/video-production",
+        desc: "Expert execution from behind the scenes. I bring life to the vision without ever stepping into the frame letting the visuals speak for themselves"
+    },
 ];
 
 const Projects: React.FC = () => {
@@ -51,7 +57,7 @@ const Projects: React.FC = () => {
                     {
                         projectCategories.map((projectCategory, index) => <Link
                             key={projectCategory.name}
-                            className={index === projectCategories.length - 1 ? "col-span-1 md:col-span-2" : ""}
+                            className={index === projectCategories.length - 1 ? "col-span-1 md:col-span-1" : ""}
                             href={projectCategory.url}>
                             <div
                                 key={projectCategory.name}

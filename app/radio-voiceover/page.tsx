@@ -69,6 +69,10 @@ const ProjectPage: React.FC = () => {
                                         fallbackContent="Your browser does not support HTML5 video tags."
                                         format="webm"
                                     />
+
+                                    <div className="w-full mt-4 px-4 py-3 rounded-2xl bg-gray-300 dark:bg-neutral-900/80 shadow flex flex-col gap-1">
+                                        <span className="font-bold text-base text-violet-700 dark:text-violet-500">{video.public_id.split("/")[1]}</span>
+                                    </div>
                                 </CloudinaryContext>
                             </div>
                         ))}

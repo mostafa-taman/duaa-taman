@@ -6,7 +6,6 @@ import {
 } from "cloudinary-react";
 import { Ghost, ShieldX } from "lucide-react";
 
-import CustomVideoPlayer from "@/components/general/CustomVideoPlayer";
 import GradientText from "@/components/general/GradientText";
 import GridLoader from "react-spinners/GridLoader";
 import { VideoType } from "@/types/ui";
@@ -22,8 +21,8 @@ const fetcher = async (url: string) => {
     return response.json();
 };
 
-const ProjectPage: React.FC = () => {
-    const { data, error, isLoading } = useSWR("/api/videos", fetcher);
+const VideoProductionPage: React.FC = () => {
+    const { data, error, isLoading } = useSWR("/api/production", fetcher);
 
     if (isLoading) return <div className="flex justify-center h-screen items-center">
         <GridLoader color="#7e22ce" className="justify-center" size={30} />
@@ -71,13 +70,11 @@ const ProjectPage: React.FC = () => {
                                         className="md:h-[500px] md:w-[500px] bg-zinc-700"
                                     />
 
-
                                     <div className="w-full mt-4 px-4 py-3 rounded-2xl bg-gray-300 dark:bg-neutral-900/80 shadow flex flex-col gap-1">
                                         <span className="font-bold text-base text-violet-700 dark:text-violet-500">{video.public_id.split("/")[1]}</span>
                                     </div>
                                 </CloudinaryContext>
                             </div>
-
                         ))}
                 </div>
             </div>
@@ -85,4 +82,4 @@ const ProjectPage: React.FC = () => {
     );
 };
 
-export default ProjectPage;
+export default VideoProductionPage;

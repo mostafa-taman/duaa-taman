@@ -53,7 +53,7 @@ const VideoEditingPage: React.FC = () => {
                     Video editing is my bread and butter, here is some projects I am proud of.
                 </p>
 
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 my-8">
+                <div className="grid grid-cols-1 gap-28 md:grid-cols-2 lg:grid-cols-3 my-8">
                     {
                         data !== undefined && data.resources.map((video: VideoType) => (
                             <div
@@ -70,7 +70,9 @@ const VideoEditingPage: React.FC = () => {
                                         className="md:h-[500px] md:w-[500px] bg-zinc-700"
                                     />
                                 </CloudinaryContext>
-                                <p className="text-lg rounded-lg text-center">{video.public_id.split("/")[1]}</p>
+                                <div className="w-full mt-4 px-4 py-3 rounded-2xl bg-gray-300 dark:bg-neutral-900/80 shadow flex flex-col gap-1">
+                                    <span className="font-bold text-base text-violet-700 dark:text-violet-500">{video.public_id.split("/")[1]}</span>
+                                </div>
                             </div>
                         ))}
                 </div>

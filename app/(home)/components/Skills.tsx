@@ -1,4 +1,6 @@
+"use client";
 import { Brush, Camera, Pencil, Video } from "lucide-react";
+import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 import GradientText from "@/components/general/GradientText";
@@ -26,6 +28,18 @@ const mySkills = [
         desc: "In this day and age graphics are an essential tool that I know how to weild."
     },
 ];
+
+
+    const skills = [
+        { name: "Video Editing", level: 90 },
+        { name: "Content Creation", level: 90 },
+        { name: "Graphic Design", level: 80 },
+        { name: "Script Writing", level: 70 },
+        { name: "Photoshop", level: 80 },
+        { name: "Canva", level: 90 },
+        { name: "Adobe Premerie Pro", level: 40 },
+        // Add more skills as needed
+    ];
 
 const Skills: React.FC = () => {
     return (
@@ -56,9 +70,29 @@ const Skills: React.FC = () => {
 
                     </div>
 
-                    <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+                    <div className="mt-8 grid grid-cols-1 justify-center">
+                                 <div className="space-y-6 mt-6 w-full">
+                        {skills.map((skill) => (
+                            <div key={skill.name} className="w-full">
+                                <div className="flex justify-between mb-1">
+                                    <span className="text-sm font-medium text-gray-700 dark:text-gray-200">{skill.name}</span>
+                                    <span className="text-sm font-medium text-gray-600 dark:text-gray-400">{skill.level}%</span>
+                                </div>
+                                <div className="w-full bg-gray-200 dark:bg-neutral-800 rounded-full h-3">
+                                    <div className="w-full bg-gray-200 dark:bg-neutral-800 rounded-full h-3">
+                                        <motion.div
+                                            className="bg-gradient-to-l gradient-primary w-full h-3 rounded-full"
+                                            initial={{ width: 0 }}
+                                            whileInView={{ width: `${skill.level}%`   }}
+                                            transition={{ duration: 1, delay: 0.2 }}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
 
-                        {mySkills.map((skill) => <div
+                        {/* {mySkills.map((skill) => <div
                             key={skill.name}
                             className="block group rounded-xl border p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                         >
@@ -72,7 +106,7 @@ const Skills: React.FC = () => {
                                 {skill.desc}
                             </p>
                         </div>
-                        )}
+                        )} */}
                     </div>
                 </div>
             </div>
@@ -81,3 +115,4 @@ const Skills: React.FC = () => {
 };
 
 export default Skills;
+
