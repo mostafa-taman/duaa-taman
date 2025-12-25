@@ -6,7 +6,7 @@ import {
 } from "cloudinary-react";
 import { Ghost, ShieldX } from "lucide-react";
 
-import CustomVideoPlayer from "@/components/general/CustomVideoPlayer";
+
 import GradientText from "@/components/general/GradientText";
 import GridLoader from "react-spinners/GridLoader";
 import { VideoType } from "@/types/ui";

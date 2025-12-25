@@ -1,33 +1,33 @@
 "use client";
-import { Brush, Camera, Pencil, Video } from "lucide-react";
+// import { Brush, Camera, Pencil, Video } from "lucide-react";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 import GradientText from "@/components/general/GradientText";
 import Link from "next/link";
 
-const mySkills = [
-    {
-        name: "Video Editing",
-        icon: <Video className="text-pink-600" size={40} />,
-        desc: "I can edit videos on a professional level using tools like Davinci Reslove and Adobe Premiere."
-    },
-    {
-        name: "Video Creation",
-        icon: <Camera className="text-pink-600" size={40} />,
-        desc: "I can high quality video about any topic for social media."
-    },
-    {
-        name: "Script Writing",
-        icon: <Pencil className="text-pink-600" size={40} />,
-        desc: "If you need someone to write a script, you've come to the right place."
-    },
-    {
-        name: "Graphic Design",
-        icon: <Brush className="text-pink-600" size={40} />,
-        desc: "In this day and age graphics are an essential tool that I know how to weild."
-    },
-];
+// const mySkills = [
+//     {
+//         name: "Video Editing",
+//         icon: <Video className="text-pink-600" size={40} />,
+//         desc: "I can edit videos on a professional level using tools like Davinci Reslove and Adobe Premiere."
+//     },
+//     {
+//         name: "Video Creation",
+//         icon: <Camera className="text-pink-600" size={40} />,
+//         desc: "I can high quality video about any topic for social media."
+//     },
+//     {
+//         name: "Script Writing",
+//         icon: <Pencil className="text-pink-600" size={40} />,
+//         desc: "If you need someone to write a script, you've come to the right place."
+//     },
+//     {
+//         name: "Graphic Design",
+//         icon: <Brush className="text-pink-600" size={40} />,
+//         desc: "In this day and age graphics are an essential tool that I know how to weild."
+//     },
+// ];
 
 
     const skills = [

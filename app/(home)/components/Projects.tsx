@@ -1,4 +1,4 @@
-import { Brush, Camera, Mic2, Pencil, Video, Aperture } from "lucide-react";
+import { Aperture, Brush, Camera, Mic2, Pencil, Video } from "lucide-react";
 
 import GradientText from "@/components/general/GradientText";
 import Link from "next/link";

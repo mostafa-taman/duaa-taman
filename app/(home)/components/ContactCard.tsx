@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
 import SocialMedia from "@/components/general/SocialMedia";
 
 const Footer: React.FC = () => {
@@ -52,7 +51,7 @@ const Footer: React.FC = () => {
                     viewport={{ once: true }}
                 >
                     <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white mb-2 drop-shadow">
-                       Let's Connect!
+                       Let&apos;s Connect!
                     </h2>
                     <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base max-w-xl mx-auto mb-4">
                         Reach out through any platform below or send an email. I look forward to collaborating with you!
