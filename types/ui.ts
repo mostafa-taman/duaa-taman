@@ -12,6 +12,7 @@ export type VideoType = {
     folder: string;
     url: string;
     secure_url: string;
+    display_name:string;
 }
 
 export type DocumentType = {
