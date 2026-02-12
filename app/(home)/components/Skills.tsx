@@ -33,11 +33,9 @@ import Link from "next/link";
     const skills = [
         { name: "Video Editing", level: 90 },
         { name: "Content Creation", level: 90 },
-        { name: "Graphic Design", level: 80 },
-        { name: "Script Writing", level: 70 },
-        { name: "Photoshop", level: 80 },
-        { name: "Canva", level: 90 },
-        { name: "Adobe Premerie Pro", level: 40 },
+        { name: "Graphic Design", level: 90 },
+        { name: "Script Writing", level: 80 },
+        { name: "Video Production", level: 80 },
         // Add more skills as needed
     ];
 
@@ -60,7 +58,7 @@ const Skills: React.FC = () => {
                             set of skills. If you want more details you can check out my resume below.
                         </p>
 
-                        <Link href="https://drive.google.com/file/d/1VXqcm9lb8SOAyRQuQdZ889vh6bx7lyou/view" target="_">
+                        <Link href="https://drive.google.com/file/d/1BmoFomCC4VmN5FQYcF0nakFBkkwb6ibb/view" target="_">
                             <Button
                                 className="mt-8 inline-block rounded gradient-primary bg-gradient-to-l hover:scale-110 px-12 py-3 text-sm font-medium text-white transition"
                             >

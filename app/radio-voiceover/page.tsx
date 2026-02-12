@@ -53,29 +53,42 @@ const ProjectPage: React.FC = () => {
                     Videos are not my only area of expertise, but I can also do voice over & all kinds of audio content when needed.
                 </p>
 
-                <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
-                    {
-                        data !== undefined && data.resources.map((video: VideoType) => (
-                            <div
-                                key={video.public_id}
-                                className="w-100 h-100"
-                            >
-                                <CloudinaryContext cloud_name="codedog">
-                                    <Video
-                                        publicId={video.public_id}
-                                        cloudName={process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}
-                                        secure="true"
-                                        controls
-                                        fallbackContent="Your browser does not support HTML5 video tags."
-                                        format="webm"
-                                    />
+                <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3 my-12">
+                  {data?.resources.map((video: VideoType) => (
+                    <div
+                      key={video.public_id}
+                      className="group w-full"
+                    >
+                      {/* Card */}
+                      <div className="flex flex-col">
+                        
+                        {/* Video Container */}
+                        <div className="overflow-hidden rounded-3xl shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-1 bg-neutral-900">
+                          <CloudinaryContext cloud_name="codedog">
+                            <Video
+                              publicId={video.public_id}
+                              cloudName={process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}
+                              secure="true"
+                              controls
+                              fallbackContent="Your browser does not support HTML5 video tags."
+                              className="w-full h-[420px] object-cover"
+                            />
+                          </CloudinaryContext>
+                        </div>
 
-                                    <div className="w-full mt-4 px-4 py-3 rounded-2xl bg-gray-300 dark:bg-neutral-900/80 shadow flex flex-col gap-1">
-                                        <span className="font-bold text-base text-violet-700 dark:text-violet-500">{video.public_id.split("/")[1]}</span>
-                                    </div>
-                                </CloudinaryContext>
-                            </div>
-                        ))}
+                        {/* Title Section */}
+                        <div className="mt-6 px-2">
+                          <h3 className="text-lg md:text-xl font-semibold tracking-tight text-neutral-800 dark:text-neutral-100 transition-colors duration-300 group-hover:text-violet-500">
+                            {video.display_name}
+                          </h3>
+
+                          {/* Accent line */}
+                          <div className="mt-3 h-[2px] w-8 bg-violet-500 rounded-full transition-all duration-300 group-hover:w-14" />
+                        </div>
+
+                      </div>
+                    </div>
+                  ))}
                 </div>
             </div>
         </section>

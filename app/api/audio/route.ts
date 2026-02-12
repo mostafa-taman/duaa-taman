@@ -10,7 +10,7 @@ cloudinary.config({
 
 export const GET = async () => {
     const data = await cloudinary.api
-        .resources({ resource_type: "video", prefix: "radio", type: "upload", cache: false }, function (error, result) {
+        .resources_by_asset_folder("radio", { resource_type: "video", type: "upload", cache: false }, function (error, result) {
             if (result) return result;
             if (error) throw new Error(error.message);
         })

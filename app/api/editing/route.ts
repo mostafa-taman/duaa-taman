@@ -11,7 +11,8 @@ cloudinary.config({
 
 export const GET = async () => {
     const data = await cloudinary.api
-        .resources({ resource_type: "video", prefix: "editing", type: "upload", cache: false, max_results: 100 }, function (error, result) {
+        .resources_by_asset_folder("editing", { resource_type: "video", prefix:"editing/", type: "upload", cache: false, max_results: 100 }, function (error, result) {
+            console.log({result, error})
             if (result) return result;
             if (error) throw new Error(error.message);
         })
